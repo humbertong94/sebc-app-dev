@@ -1,0 +1,56 @@
+[raken@cdh02 ~]$ hdfs dfs -cat /flume/humberto/18-05-15/191352/FlumeData.1526411632103
+this is a test it does not work hello
+
+
+[raken@cdh02 ~]$ hdfs dfs -ls -R /flume/humberto
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:14 /flume/humberto/18-05-15
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:12 /flume/humberto/18-05-15/191225
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:12 /flume/humberto/18-05-15/191225/FlumeData.1526411546091
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:12 /flume/humberto/18-05-15/191228
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:12 /flume/humberto/18-05-15/191228/FlumeData.1526411548089
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:13 /flume/humberto/18-05-15/191231
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:13 /flume/humberto/18-05-15/191231/FlumeData.1526411551090
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:13 /flume/humberto/18-05-15/191237
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:13 /flume/humberto/18-05-15/191237/FlumeData.1526411557090
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:13 /flume/humberto/18-05-15/191240
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:13 /flume/humberto/18-05-15/191240/FlumeData.1526411560091
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:13 /flume/humberto/18-05-15/191243
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:13 /flume/humberto/18-05-15/191243/FlumeData.1526411563092
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:13 /flume/humberto/18-05-15/191249
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:13 /flume/humberto/18-05-15/191249/FlumeData.1526411569094
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:13 /flume/humberto/18-05-15/191252
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:13 /flume/humberto/18-05-15/191252/FlumeData.1526411572093
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:13 /flume/humberto/18-05-15/191255
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:13 /flume/humberto/18-05-15/191255/FlumeData.1526411575094
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:13 /flume/humberto/18-05-15/191258
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:13 /flume/humberto/18-05-15/191258/FlumeData.1526411578095
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:13 /flume/humberto/18-05-15/191301
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:13 /flume/humberto/18-05-15/191301/FlumeData.1526411581094
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:13 /flume/humberto/18-05-15/191304
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:13 /flume/humberto/18-05-15/191304/FlumeData.1526411584094
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:13 /flume/humberto/18-05-15/191307
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:13 /flume/humberto/18-05-15/191307/FlumeData.1526411587096
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:13 /flume/humberto/18-05-15/191310
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:13 /flume/humberto/18-05-15/191310/FlumeData.1526411590097
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:13 /flume/humberto/18-05-15/191316
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:13 /flume/humberto/18-05-15/191316/FlumeData.1526411596097
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:13 /flume/humberto/18-05-15/191319
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:13 /flume/humberto/18-05-15/191319/FlumeData.1526411599097
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:13 /flume/humberto/18-05-15/191322
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:13 /flume/humberto/18-05-15/191322/FlumeData.1526411602097
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:13 /flume/humberto/18-05-15/191328
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:13 /flume/humberto/18-05-15/191328/FlumeData.1526411608099
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:14 /flume/humberto/18-05-15/191331
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:14 /flume/humberto/18-05-15/191331/FlumeData.1526411611100
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:14 /flume/humberto/18-05-15/191337
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:14 /flume/humberto/18-05-15/191337/FlumeData.1526411617100
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:14 /flume/humberto/18-05-15/191340
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:14 /flume/humberto/18-05-15/191340/FlumeData.1526411620100
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:14 /flume/humberto/18-05-15/191346
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:14 /flume/humberto/18-05-15/191346/FlumeData.1526411626101
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:14 /flume/humberto/18-05-15/191352
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:14 /flume/humberto/18-05-15/191352/FlumeData.1526411632103
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:14 /flume/humberto/18-05-15/191358
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:14 /flume/humberto/18-05-15/191358/FlumeData.1526411638105
+drwxrwxrwx   - raken supergroup          0 2018-05-15 19:14 /flume/humberto/18-05-15/191407
+-rw-r--r--   3 raken supergroup         38 2018-05-15 19:14 /flume/humberto/18-05-15/191407/FlumeData.1526411647105
