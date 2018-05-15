@@ -1,0 +1,331 @@
+[raken@cdh01 ~]$ HADOOP_USER_NAME=hdfs sqoop import --connect jdbc:postgresql://localhost:7432/scm --table cm_version --username scm --password 2BfxNqddSW -m 1 --target-dir hdfs://cdh02:8020/home/humberto/sqoop2/
+Warning: /opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/bin/../lib/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+18/05/15 17:26:27 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6-cdh5.13.3
+18/05/15 17:26:27 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+18/05/15 17:26:28 INFO manager.SqlManager: Using default fetchSize of 1000
+18/05/15 17:26:28 INFO tool.CodeGenTool: Beginning code generation
+18/05/15 17:26:28 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM "cm_version" AS t LIMIT 1
+18/05/15 17:26:28 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/bin/../lib/sqoop/../hadoop-mapreduce
+Note: /tmp/sqoop-raken/compile/1e2314868be97cdebefd2af3dc6dbbf2/cm_version.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+18/05/15 17:26:30 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-raken/compile/1e2314868be97cdebefd2af3dc6dbbf2/cm_version.jar
+18/05/15 17:26:30 WARN manager.PostgresqlManager: It looks like you are importing from postgresql.
+18/05/15 17:26:30 WARN manager.PostgresqlManager: This transfer can be faster! Use the --direct
+18/05/15 17:26:30 WARN manager.PostgresqlManager: option to exercise a postgresql-specific fast path.
+18/05/15 17:26:30 INFO mapreduce.ImportJobBase: Beginning import of cm_version
+18/05/15 17:26:31 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+18/05/15 17:26:32 INFO Configuration.deprecation: mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+18/05/15 17:26:32 INFO Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+18/05/15 17:26:32 INFO jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+18/05/15 17:26:32 INFO db.DBInputFormat: Using read commited transaction isolation
+18/05/15 17:26:32 INFO mapreduce.JobSubmitter: number of splits:1
+18/05/15 17:26:33 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_local249396710_0001
+18/05/15 17:26:33 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193446/slf4j-api-1.7.5.jar <- /home/raken/slf4j-api-1.7.5.jar
+18/05/15 17:26:33 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/slf4j-api-1.7.5.jar as file:/tmp/hadoop-raken/mapred/local/1526405193446/slf4j-api-1.7.5.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193447/commons-jexl-2.1.1.jar <- /home/raken/commons-jexl-2.1.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/commons-jexl-2.1.1.jar as file:/tmp/hadoop-raken/mapred/local/1526405193447/commons-jexl-2.1.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193448/jackson-databind-2.3.1.jar <- /home/raken/jackson-databind-2.3.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/jackson-databind-2.3.1.jar as file:/tmp/hadoop-raken/mapred/local/1526405193448/jackson-databind-2.3.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193449/commons-io-1.4.jar <- /home/raken/commons-io-1.4.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/commons-io-1.4.jar as file:/tmp/hadoop-raken/mapred/local/1526405193449/commons-io-1.4.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193450/commons-codec-1.4.jar <- /home/raken/commons-codec-1.4.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/commons-codec-1.4.jar as file:/tmp/hadoop-raken/mapred/local/1526405193450/commons-codec-1.4.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193451/jackson-annotations-2.3.1.jar <- /home/raken/jackson-annotations-2.3.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/jackson-annotations-2.3.1.jar as file:/tmp/hadoop-raken/mapred/local/1526405193451/jackson-annotations-2.3.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193452/parquet-common.jar <- /home/raken/parquet-common.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/parquet-common.jar as file:/tmp/hadoop-raken/mapred/local/1526405193452/parquet-common.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193453/snappy-java-1.0.4.1.jar <- /home/raken/snappy-java-1.0.4.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/snappy-java-1.0.4.1.jar as file:/tmp/hadoop-raken/mapred/local/1526405193453/snappy-java-1.0.4.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193454/paranamer-2.3.jar <- /home/raken/paranamer-2.3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/paranamer-2.3.jar as file:/tmp/hadoop-raken/mapred/local/1526405193454/paranamer-2.3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193455/kite-hadoop-compatibility.jar <- /home/raken/kite-hadoop-compatibility.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/kite-hadoop-compatibility.jar as file:/tmp/hadoop-raken/mapred/local/1526405193455/kite-hadoop-compatibility.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193456/parquet-column.jar <- /home/raken/parquet-column.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/parquet-column.jar as file:/tmp/hadoop-raken/mapred/local/1526405193456/parquet-column.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193457/jackson-core-2.3.1.jar <- /home/raken/jackson-core-2.3.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/jackson-core-2.3.1.jar as file:/tmp/hadoop-raken/mapred/local/1526405193457/jackson-core-2.3.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193458/parquet-format.jar <- /home/raken/parquet-format.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/parquet-format.jar as file:/tmp/hadoop-raken/mapred/local/1526405193458/parquet-format.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193459/parquet-encoding.jar <- /home/raken/parquet-encoding.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/parquet-encoding.jar as file:/tmp/hadoop-raken/mapred/local/1526405193459/parquet-encoding.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193460/commons-logging-1.1.3.jar <- /home/raken/commons-logging-1.1.3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/commons-logging-1.1.3.jar as file:/tmp/hadoop-raken/mapred/local/1526405193460/commons-logging-1.1.3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193461/sqoop-1.4.6-cdh5.13.3.jar <- /home/raken/sqoop-1.4.6-cdh5.13.3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/jars/sqoop-1.4.6-cdh5.13.3.jar as file:/tmp/hadoop-raken/mapred/local/1526405193461/sqoop-1.4.6-cdh5.13.3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193462/opencsv-2.3.jar <- /home/raken/opencsv-2.3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/opencsv-2.3.jar as file:/tmp/hadoop-raken/mapred/local/1526405193462/opencsv-2.3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193463/parquet-hadoop.jar <- /home/raken/parquet-hadoop.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/parquet-hadoop.jar as file:/tmp/hadoop-raken/mapred/local/1526405193463/parquet-hadoop.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193464/avro.jar <- /home/raken/avro.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/avro.jar as file:/tmp/hadoop-raken/mapred/local/1526405193464/avro.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193465/ant-eclipse-1.0-jvm1.2.jar <- /home/raken/ant-eclipse-1.0-jvm1.2.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/ant-eclipse-1.0-jvm1.2.jar as file:/tmp/hadoop-raken/mapred/local/1526405193465/ant-eclipse-1.0-jvm1.2.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193466/parquet-avro.jar <- /home/raken/parquet-avro.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/parquet-avro.jar as file:/tmp/hadoop-raken/mapred/local/1526405193466/parquet-avro.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193467/hsqldb-1.8.0.10.jar <- /home/raken/hsqldb-1.8.0.10.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/hsqldb-1.8.0.10.jar as file:/tmp/hadoop-raken/mapred/local/1526405193467/hsqldb-1.8.0.10.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193468/commons-compress-1.4.1.jar <- /home/raken/commons-compress-1.4.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/commons-compress-1.4.1.jar as file:/tmp/hadoop-raken/mapred/local/1526405193468/commons-compress-1.4.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193469/parquet-jackson.jar <- /home/raken/parquet-jackson.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/parquet-jackson.jar as file:/tmp/hadoop-raken/mapred/local/1526405193469/parquet-jackson.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193470/kite-data-mapreduce.jar <- /home/raken/kite-data-mapreduce.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/kite-data-mapreduce.jar as file:/tmp/hadoop-raken/mapred/local/1526405193470/kite-data-mapreduce.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/var/lib/sqoop/postgresql-9.2-1002.jdbc4.jar as file:/tmp/hadoop-raken/mapred/local/1526405193471/postgresql-9.2-1002.jdbc4.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193472/commons-lang3-3.4.jar <- /home/raken/commons-lang3-3.4.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/commons-lang3-3.4.jar as file:/tmp/hadoop-raken/mapred/local/1526405193472/commons-lang3-3.4.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193473/jackson-mapper-asl-1.8.8.jar <- /home/raken/jackson-mapper-asl-1.8.8.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/jackson-mapper-asl-1.8.8.jar as file:/tmp/hadoop-raken/mapred/local/1526405193473/jackson-mapper-asl-1.8.8.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193474/xz-1.0.jar <- /home/raken/xz-1.0.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/xz-1.0.jar as file:/tmp/hadoop-raken/mapred/local/1526405193474/xz-1.0.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193475/ant-contrib-1.0b3.jar <- /home/raken/ant-contrib-1.0b3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/ant-contrib-1.0b3.jar as file:/tmp/hadoop-raken/mapred/local/1526405193475/ant-contrib-1.0b3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193476/jackson-core-asl-1.8.8.jar <- /home/raken/jackson-core-asl-1.8.8.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/jackson-core-asl-1.8.8.jar as file:/tmp/hadoop-raken/mapred/local/1526405193476/jackson-core-asl-1.8.8.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193477/avro-mapred-hadoop2.jar <- /home/raken/avro-mapred-hadoop2.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/avro-mapred-hadoop2.jar as file:/tmp/hadoop-raken/mapred/local/1526405193477/avro-mapred-hadoop2.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193478/kite-data-core.jar <- /home/raken/kite-data-core.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/kite-data-core.jar as file:/tmp/hadoop-raken/mapred/local/1526405193478/kite-data-core.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193479/fastutil-6.3.jar <- /home/raken/fastutil-6.3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/fastutil-6.3.jar as file:/tmp/hadoop-raken/mapred/local/1526405193479/fastutil-6.3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-raken/mapred/local/1526405193480/kite-data-hive.jar <- /home/raken/kite-data-hive.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: Localized file:/opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/lib/sqoop/lib/kite-data-hive.jar as file:/tmp/hadoop-raken/mapred/local/1526405193480/kite-data-hive.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193446/slf4j-api-1.7.5.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193447/commons-jexl-2.1.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193448/jackson-databind-2.3.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193449/commons-io-1.4.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193450/commons-codec-1.4.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193451/jackson-annotations-2.3.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193452/parquet-common.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193453/snappy-java-1.0.4.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193454/paranamer-2.3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193455/kite-hadoop-compatibility.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193456/parquet-column.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193457/jackson-core-2.3.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193458/parquet-format.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193459/parquet-encoding.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193460/commons-logging-1.1.3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193461/sqoop-1.4.6-cdh5.13.3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193462/opencsv-2.3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193463/parquet-hadoop.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193464/avro.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193465/ant-eclipse-1.0-jvm1.2.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193466/parquet-avro.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193467/hsqldb-1.8.0.10.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193468/commons-compress-1.4.1.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193469/parquet-jackson.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193470/kite-data-mapreduce.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193471/postgresql-9.2-1002.jdbc4.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193472/commons-lang3-3.4.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193473/jackson-mapper-asl-1.8.8.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193474/xz-1.0.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193475/ant-contrib-1.0b3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193476/jackson-core-asl-1.8.8.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193477/avro-mapred-hadoop2.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193478/kite-data-core.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193479/fastutil-6.3.jar
+18/05/15 17:26:34 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-raken/mapred/local/1526405193480/kite-data-hive.jar
+18/05/15 17:26:34 INFO mapreduce.Job: The url to track the job: http://localhost:8080/
+18/05/15 17:26:34 INFO mapreduce.Job: Running job: job_local249396710_0001
+18/05/15 17:26:34 INFO mapred.LocalJobRunner: OutputCommitter set in config null
+18/05/15 17:26:34 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+18/05/15 17:26:34 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+18/05/15 17:26:34 INFO mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+18/05/15 17:26:34 INFO mapred.LocalJobRunner: Waiting for map tasks
+18/05/15 17:26:34 INFO mapred.LocalJobRunner: Starting task: attempt_local249396710_0001_m_000000_0
+18/05/15 17:26:34 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+18/05/15 17:26:34 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+18/05/15 17:26:34 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+18/05/15 17:26:34 INFO db.DBInputFormat: Using read commited transaction isolation
+18/05/15 17:26:34 INFO mapred.MapTask: Processing split: 1=1 AND 1=1
+18/05/15 17:26:34 INFO db.DBRecordReader: Working on split: 1=1 AND 1=1
+18/05/15 17:26:34 INFO db.DBRecordReader: Executing query: SELECT "version", "guid", "last_update_instant", "ts", "hostname", "last_active_timestamp" FROM "cm_version" WHERE ( 1=1 ) AND ( 1=1 )
+18/05/15 17:26:34 INFO mapreduce.AutoProgressMapper: Auto-progress thread is finished. keepGoing=false
+18/05/15 17:26:34 INFO mapred.LocalJobRunner:
+18/05/15 17:26:34 INFO mapred.Task: Task:attempt_local249396710_0001_m_000000_0 is done. And is in the process of committing
+18/05/15 17:26:34 INFO mapred.LocalJobRunner:
+18/05/15 17:26:34 INFO mapred.Task: Task attempt_local249396710_0001_m_000000_0 is allowed to commit now
+18/05/15 17:26:34 INFO output.FileOutputCommitter: Saved output of task 'attempt_local249396710_0001_m_000000_0' to hdfs://cdh02:8020/home/humberto/sqoop2/_temporary/0/task_local249396710_0001_m_000000
+18/05/15 17:26:34 INFO mapred.LocalJobRunner: map
+18/05/15 17:26:34 INFO mapred.Task: Task 'attempt_local249396710_0001_m_000000_0' done.
+18/05/15 17:26:34 INFO mapred.LocalJobRunner: Finishing task: attempt_local249396710_0001_m_000000_0
+18/05/15 17:26:34 INFO mapred.LocalJobRunner: map task executor complete.
+18/05/15 17:26:35 INFO mapreduce.Job: Job job_local249396710_0001 running in uber mode : false
+18/05/15 17:26:35 INFO mapreduce.Job:  map 100% reduce 0%
+18/05/15 17:26:35 INFO mapreduce.Job: Job job_local249396710_0001 completed successfully
+18/05/15 17:26:35 INFO mapreduce.Job: Counters: 20
+        File System Counters
+                FILE: Number of bytes read=32702287
+                FILE: Number of bytes written=33337793
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=0
+                HDFS: Number of bytes written=101
+                HDFS: Number of read operations=4
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=3
+        Map-Reduce Framework
+                Map input records=1
+                Map output records=1
+                Input split bytes=87
+                Spilled Records=0
+                Failed Shuffles=0
+                Merged Map outputs=0
+                GC time elapsed (ms)=0
+                Total committed heap usage (bytes)=923795456
+        File Input Format Counters
+                Bytes Read=0
+        File Output Format Counters
+                Bytes Written=101
+18/05/15 17:26:35 INFO mapreduce.ImportJobBase: Transferred 101 bytes in 3.2448 seconds (31.1267 bytes/sec)
+18/05/15 17:26:35 INFO mapreduce.ImportJobBase: Retrieved 1 records.
+
+
+
+
+Command 2
+
+
+
+
+
+[raken@cdh01 ~]$ sqoop Job_day1
+Warning: /opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/bin/../lib/sqoop/../accumulo does not exist! Acc                                                             umulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+No such sqoop tool: Job_day1. See 'sqoop help'.
+[raken@cdh01 ~]$ sqoop job --show Job_day1
+Warning: /opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/bin/../lib/sqoop/../accumulo does not exist! Acc                                                             umulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+18/05/15 16:39:31 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6-cdh5.13.3
+Enter password:
+Job: Job_day1
+Tool: import
+Options:
+----------------------------
+verbose = false
+hcatalog.drop.and.create.table = false
+db.connect.string = jdbc:postgresql://localhost:7432/scm
+codegen.output.delimiters.escape = 0
+codegen.output.delimiters.enclose.required = false
+codegen.input.delimiters.field = 0
+split.limit = null
+hbase.create.table = false
+mainframe.input.dataset.type = p
+db.require.password = true
+hdfs.append.dir = false
+db.table = com_version
+codegen.input.delimiters.escape = 0
+accumulo.create.table = false
+import.fetch.size = null
+codegen.input.delimiters.enclose.required = false
+db.username = scm
+reset.onemapper = false
+codegen.output.delimiters.record = 10
+import.max.inline.lob.size = 16777216
+sqoop.throwOnError = false
+hbase.bulk.load.enabled = false
+hcatalog.create.table = false
+db.clear.staging.table = false
+codegen.input.delimiters.record = 0
+enable.compression = false
+hive.overwrite.table = false
+hive.import = false
+codegen.input.delimiters.enclose = 0
+accumulo.batch.size = 10240000
+hive.drop.delims = false
+customtool.options.jsonmap = {}
+codegen.output.delimiters.enclose = 0
+hdfs.delete-target.dir = false
+codegen.output.dir = .
+codegen.auto.compile.dir = true
+relaxed.isolation = false
+mapreduce.num.mappers = 1
+accumulo.max.latency = 5000
+import.direct.split.size = 0
+sqlconnection.metadata.transaction.isolation.level = 2
+codegen.output.delimiters.field = 44
+export.new.update = UpdateOnly
+incremental.mode = None
+hdfs.file.format = TextFile
+sqoop.oracle.escaping.disabled = true
+codegen.compile.dir = /tmp/sqoop-raken/compile/30a890ac709e240528b623fe35e0bc33
+direct.import = false
+temporary.dirRoot = _sqoop
+hive.fail.table.exists = false
+db.batch = false
+[raken@cdh01 ~]$ sqoop Job_day16Enter password:
+Warning: /opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/bin/../lib/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+No such sqoop tool: Job_day16Enter. See 'sqoop help'.
+[raken@cdh01 ~]$ sqoop job --show Job_day1 sqoop job --show Job_day1
+Warning: /opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/bin/../lib/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+18/05/15 16:45:06 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6-cdh5.13.3
+18/05/15 16:45:06 ERROR tool.BaseSqoopTool: Error parsing arguments for job:
+18/05/15 16:45:06 ERROR tool.BaseSqoopTool: Unrecognized argument: sqoop
+18/05/15 16:45:06 ERROR tool.BaseSqoopTool: Unrecognized argument: job
+18/05/15 16:45:06 ERROR tool.BaseSqoopTool: Unrecognized argument: --show
+18/05/15 16:45:06 ERROR tool.BaseSqoopTool: Unrecognized argument: Job_day1
+
+Try --help for usage instructions.
+[raken@cdh01 ~]$ sqoop job --show Job_day1
+Warning: /opt/cloudera/parcels/CDH-5.13.3-1.cdh5.13.3.p0.2/bin/../lib/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+18/05/15 16:46:32 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6-cdh5.13.3
+Enter password:
+Job: Job_day1
+Tool: import
+Options:
+----------------------------
+verbose = false
+hcatalog.drop.and.create.table = false
+db.connect.string = jdbc:postgresql://localhost:7432/scm
+codegen.output.delimiters.escape = 0
+codegen.output.delimiters.enclose.required = false
+codegen.input.delimiters.field = 0
+split.limit = null
+hbase.create.table = false
+mainframe.input.dataset.type = p
+db.require.password = true
+hdfs.append.dir = false
+db.table = com_version
+codegen.input.delimiters.escape = 0
+accumulo.create.table = false
+import.fetch.size = null
+codegen.input.delimiters.enclose.required = false
+db.username = scm
+reset.onemapper = false
+codegen.output.delimiters.record = 10
+import.max.inline.lob.size = 16777216
+sqoop.throwOnError = false
+hbase.bulk.load.enabled = false
+hcatalog.create.table = false
+db.clear.staging.table = false
+codegen.input.delimiters.record = 0
+enable.compression = false
+hive.overwrite.table = false
+hive.import = false
+codegen.input.delimiters.enclose = 0
+accumulo.batch.size = 10240000
+hive.drop.delims = false
+customtool.options.jsonmap = {}
+codegen.output.delimiters.enclose = 0
+hdfs.delete-target.dir = false
+codegen.output.dir = .
+codegen.auto.compile.dir = true
+relaxed.isolation = false
+mapreduce.num.mappers = 1
+accumulo.max.latency = 5000
+import.direct.split.size = 0
+sqlconnection.metadata.transaction.isolation.level = 2
+codegen.output.delimiters.field = 44
+export.new.update = UpdateOnly
+incremental.mode = None
+hdfs.file.format = TextFile
+sqoop.oracle.escaping.disabled = true
+codegen.compile.dir = /tmp/sqoop-raken/compile/73e1c50953513fd204634deb5bf2e0f3
+direct.import = false
+temporary.dirRoot = _sqoop
+hive.fail.table.exists = false
+db.batch = false
