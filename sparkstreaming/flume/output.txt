@@ -1,0 +1,159 @@
+[raken@cdh02 flume]$ sh run.sh
+2018-05-18 18:46:46,715 WARN  [main] util.NativeCodeLoader (NativeCodeLoader.java:<clinit>(62)) - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2018-05-18 18:46:46,934 INFO  [main] spark.SparkContext (Logging.scala:logInfo(54)) - Running Spark version 2.3.0.cloudera2
+2018-05-18 18:46:46,958 INFO  [main] spark.SparkContext (Logging.scala:logInfo(54)) - Submitted application: Spark Stream Example
+2018-05-18 18:46:47,020 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(54)) - Changing view acls to: raken
+2018-05-18 18:46:47,021 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(54)) - Changing modify acls to: raken
+2018-05-18 18:46:47,021 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(54)) - Changing view acls groups to:
+2018-05-18 18:46:47,021 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(54)) - Changing modify acls groups to:
+2018-05-18 18:46:47,022 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(54)) - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(raken); groups with view permissions: Set(); users  with modify permissions: Set(raken); groups with modify permissions: Set()
+2018-05-18 18:46:47,286 INFO  [main] util.Utils (Logging.scala:logInfo(54)) - Successfully started service 'sparkDriver' on port 43270.
+2018-05-18 18:46:47,313 INFO  [main] spark.SparkEnv (Logging.scala:logInfo(54)) - Registering MapOutputTracker
+2018-05-18 18:46:47,336 INFO  [main] spark.SparkEnv (Logging.scala:logInfo(54)) - Registering BlockManagerMaster
+2018-05-18 18:46:47,340 INFO  [main] storage.BlockManagerMasterEndpoint (Logging.scala:logInfo(54)) - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2018-05-18 18:46:47,341 INFO  [main] storage.BlockManagerMasterEndpoint (Logging.scala:logInfo(54)) - BlockManagerMasterEndpoint up
+2018-05-18 18:46:47,352 INFO  [main] storage.DiskBlockManager (Logging.scala:logInfo(54)) - Created local directory at /tmp/blockmgr-b1b17644-a422-45f4-9852-f823821056dd
+2018-05-18 18:46:47,373 INFO  [main] memory.MemoryStore (Logging.scala:logInfo(54)) - MemoryStore started with capacity 366.3 MB
+2018-05-18 18:46:47,478 INFO  [main] spark.SparkEnv (Logging.scala:logInfo(54)) - Registering OutputCommitCoordinator
+2018-05-18 18:46:47,561 INFO  [main] util.log (Log.java:initialized(192)) - Logging initialized @2029ms
+2018-05-18 18:46:47,626 INFO  [main] server.Server (Server.java:doStart(345)) - jetty-9.3.z-SNAPSHOT
+2018-05-18 18:46:47,641 INFO  [main] server.Server (Server.java:doStart(403)) - Started @2110ms
+2018-05-18 18:46:47,662 INFO  [main] server.AbstractConnector (AbstractConnector.java:doStart(270)) - Started ServerConnector@10ad20cb{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2018-05-18 18:46:47,663 INFO  [main] util.Utils (Logging.scala:logInfo(54)) - Successfully started service 'SparkUI' on port 4040.
+2018-05-18 18:46:47,688 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@4d4d48a6{/jobs,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,689 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@65ef722a{/jobs/json,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,690 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@214894fc{/jobs/job,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,690 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@1c4ee95c{/jobs/job/json,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,691 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@5aa360ea{/stages,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,691 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@e27ba81{/stages/json,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,692 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@1556f2dd{/stages/stage,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,693 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@6b5f8707{/stages/stage/json,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,694 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@5a12c728{/stages/pool,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,694 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@6e5bfdfc{/stages/pool/json,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,695 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@71652c98{/storage,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,695 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@60b85ba1{/storage/json,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,696 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@117632cf{/storage/rdd,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,696 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@d71adc2{/storage/rdd/json,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,697 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@1a1d3c1a{/environment,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,697 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@159e366{/environment/json,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,698 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@24528a25{/executors,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,699 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@59221b97{/executors/json,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,699 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@5a772895{/executors/threadDump,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,700 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@704b2127{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,707 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@5d332969{/static,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,707 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@36b6964d{/,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,708 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@9257031{/api,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,709 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@1db0ec27{/jobs/job/kill,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,710 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.s.j.s.ServletContextHandler@d4ab71a{/stages/stage/kill,null,AVAILABLE,@Spark}
+2018-05-18 18:46:47,712 INFO  [main] ui.SparkUI (Logging.scala:logInfo(54)) - Bound SparkUI to 0.0.0.0, and started at http://CDH02:4040
+2018-05-18 18:46:47,729 INFO  [main] spark.SparkContext (Logging.scala:logInfo(54)) - Added JAR file:/home/raken/humberto/flume/target/scala-2.11/sparkstreamexample_2.11-1.1.jar at spark://CDH02:43270/jars/sparkstreamexample_2.11-1.1.jar with timestamp 1526669207729
+2018-05-18 18:46:48,129 INFO  [main] client.RMProxy (RMProxy.java:createRMProxy(123)) - Connecting to ResourceManager at /0.0.0.0:8032
+2018-05-18 18:46:48,357 INFO  [main] yarn.Client (Logging.scala:logInfo(54)) - Requesting a new application from cluster with 6 NodeManagers
+2018-05-18 18:46:48,402 INFO  [main] yarn.Client (Logging.scala:logInfo(54)) - Verifying our application has not requested more than the maximum memory capability of the cluster (35897 MB per container)
+2018-05-18 18:46:48,403 INFO  [main] yarn.Client (Logging.scala:logInfo(54)) - Will allocate AM container, with 896 MB memory including 384 MB overhead
+2018-05-18 18:46:48,403 INFO  [main] yarn.Client (Logging.scala:logInfo(54)) - Setting up container launch context for our AM
+2018-05-18 18:46:48,409 INFO  [main] yarn.Client (Logging.scala:logInfo(54)) - Setting up the launch environment for our AM container
+2018-05-18 18:46:48,416 INFO  [main] yarn.Client (Logging.scala:logInfo(54)) - Preparing resources for our AM container
+2018-05-18 18:46:48,426 WARN  [main] yarn.Client (Logging.scala:logWarning(66)) - Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+2018-05-18 18:46:50,152 INFO  [main] yarn.Client (Logging.scala:logInfo(54)) - Uploading resource file:/tmp/spark-9c345d10-be8a-4677-9d90-9ec0afddffd0/__spark_libs__6374886247879084588.zip -> file:/home/raken/.sparkStaging/application_1526660587161_0019/__spark_libs__6374886247879084588.zip
+2018-05-18 18:46:50,633 INFO  [main] yarn.Client (Logging.scala:logInfo(54)) - Uploading resource file:/tmp/spark-9c345d10-be8a-4677-9d90-9ec0afddffd0/__spark_conf__7684258609563164971.zip -> file:/home/raken/.sparkStaging/application_1526660587161_0019/__spark_conf__.zip
+2018-05-18 18:46:50,676 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(54)) - Changing view acls to: raken
+2018-05-18 18:46:50,676 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(54)) - Changing modify acls to: raken
+2018-05-18 18:46:50,677 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(54)) - Changing view acls groups to:
+2018-05-18 18:46:50,677 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(54)) - Changing modify acls groups to:
+2018-05-18 18:46:50,677 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(54)) - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(raken); groups with view permissions: Set(); users  with modify permissions: Set(raken); groups with modify permissions: Set()
+2018-05-18 18:46:51,729 INFO  [main] yarn.Client (Logging.scala:logInfo(54)) - Submitting application application_1526660587161_0019 to ResourceManager
+2018-05-18 18:46:51,976 INFO  [main] impl.YarnClientImpl (YarnClientImpl.java:submitApplication(260)) - Submitted application application_1526660587161_0019
+2018-05-18 18:46:51,979 INFO  [main] cluster.SchedulerExtensionServices (Logging.scala:logInfo(54)) - Starting Yarn extension services with app application_1526660587161_0019 and attemptId None
+2018-05-18 18:46:52,987 INFO  [main] yarn.Client (Logging.scala:logInfo(54)) - Application report for application_1526660587161_0019 (state: FAILED)
+2018-05-18 18:46:52,992 INFO  [main] yarn.Client (Logging.scala:logInfo(54)) -
+         client token: N/A
+         diagnostics: Application application_1526660587161_0019 failed 2 times due to AM Container for appattempt_1526660587161_0019_000002 exited with  exitCode: -1000
+For more detailed output, check application tracking page:http://CDH02:8088/proxy/application_1526660587161_0019/Then, click on links to logs of each attempt.
+Diagnostics: File file:/home/raken/.sparkStaging/application_1526660587161_0019/__spark_libs__6374886247879084588.zip does not exist
+java.io.FileNotFoundException: File file:/home/raken/.sparkStaging/application_1526660587161_0019/__spark_libs__6374886247879084588.zip does not exist
+        at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:598)
+        at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:811)
+        at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:588)
+        at org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:432)
+        at org.apache.hadoop.yarn.util.FSDownload.copy(FSDownload.java:251)
+        at org.apache.hadoop.yarn.util.FSDownload.access$000(FSDownload.java:61)
+        at org.apache.hadoop.yarn.util.FSDownload$2.run(FSDownload.java:364)
+        at org.apache.hadoop.yarn.util.FSDownload$2.run(FSDownload.java:362)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at javax.security.auth.Subject.doAs(Subject.java:415)
+        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1920)
+        at org.apache.hadoop.yarn.util.FSDownload.call(FSDownload.java:361)
+        at org.apache.hadoop.yarn.util.FSDownload.call(FSDownload.java:60)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+        at java.lang.Thread.run(Thread.java:745)
+
+Failing this attempt. Failing the application.
+         ApplicationMaster host: N/A
+         ApplicationMaster RPC port: -1
+         queue: root.users.raken
+         start time: 1526669211746
+         final status: FAILED
+         tracking URL: http://CDH02:8088/cluster/app/application_1526660587161_0019
+         user: raken
+2018-05-18 18:46:56,141 INFO  [main] yarn.Client (Logging.scala:logInfo(54)) - Deleted staging directory file:/home/raken/.sparkStaging/application_1526660587161_0019
+2018-05-18 18:46:56,142 ERROR [main] spark.SparkContext (Logging.scala:logError(91)) - Error initializing SparkContext.
+org.apache.spark.SparkException: Yarn application has already ended! It might have been killed or unable to launch application master.
+        at org.apache.spark.scheduler.cluster.YarnClientSchedulerBackend.waitForApplication(YarnClientSchedulerBackend.scala:83)
+        at org.apache.spark.scheduler.cluster.YarnClientSchedulerBackend.start(YarnClientSchedulerBackend.scala:63)
+        at org.apache.spark.scheduler.TaskSchedulerImpl.start(TaskSchedulerImpl.scala:164)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:500)
+        at com.cloudera.sdk.SparkStreamExample$.main(SparkStreamExample.scala:29)
+        at com.cloudera.sdk.SparkStreamExample.main(SparkStreamExample.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.apache.spark.deploy.JavaMainApplication.start(SparkApplication.scala:52)
+        at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:892)
+        at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:197)
+        at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:227)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:136)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+2018-05-18 18:46:56,159 INFO  [main] server.AbstractConnector (AbstractConnector.java:doStop(310)) - Stopped Spark@10ad20cb{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2018-05-18 18:46:56,161 INFO  [main] ui.SparkUI (Logging.scala:logInfo(54)) - Stopped Spark web UI at http://CDH02:4040
+2018-05-18 18:46:56,169 WARN  [dispatcher-event-loop-7] cluster.YarnSchedulerBackend$YarnSchedulerEndpoint (Logging.scala:logWarning(66)) - Attempted to request executors before the AM has registered!
+2018-05-18 18:46:56,174 INFO  [main] cluster.YarnClientSchedulerBackend (Logging.scala:logInfo(54)) - Shutting down all executors
+2018-05-18 18:46:56,177 INFO  [dispatcher-event-loop-0] cluster.YarnSchedulerBackend$YarnDriverEndpoint (Logging.scala:logInfo(54)) - Asking each executor to shut down
+2018-05-18 18:46:56,180 INFO  [main] cluster.SchedulerExtensionServices (Logging.scala:logInfo(54)) - Stopping SchedulerExtensionServices
+(serviceOption=None,
+ services=List(),
+ started=false)
+2018-05-18 18:46:56,282 INFO  [main] cluster.YarnClientSchedulerBackend (Logging.scala:logInfo(54)) - Stopped
+2018-05-18 18:46:56,288 INFO  [dispatcher-event-loop-4] spark.MapOutputTrackerMasterEndpoint (Logging.scala:logInfo(54)) - MapOutputTrackerMasterEndpoint stopped!
+2018-05-18 18:46:56,297 INFO  [main] memory.MemoryStore (Logging.scala:logInfo(54)) - MemoryStore cleared
+2018-05-18 18:46:56,298 INFO  [main] storage.BlockManager (Logging.scala:logInfo(54)) - BlockManager stopped
+2018-05-18 18:46:56,307 INFO  [main] storage.BlockManagerMaster (Logging.scala:logInfo(54)) - BlockManagerMaster stopped
+2018-05-18 18:46:56,307 WARN  [main] metrics.MetricsSystem (Logging.scala:logWarning(66)) - Stopping a MetricsSystem that is not running
+2018-05-18 18:46:56,310 INFO  [dispatcher-event-loop-2] scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint (Logging.scala:logInfo(54)) - OutputCommitCoordinator stopped!
+2018-05-18 18:46:56,315 INFO  [main] spark.SparkContext (Logging.scala:logInfo(54)) - Successfully stopped SparkContext
+Exception in thread "main" org.apache.spark.SparkException: Yarn application has already ended! It might have been killed or unable to launch application master.
+        at org.apache.spark.scheduler.cluster.YarnClientSchedulerBackend.waitForApplication(YarnClientSchedulerBackend.scala:83)
+        at org.apache.spark.scheduler.cluster.YarnClientSchedulerBackend.start(YarnClientSchedulerBackend.scala:63)
+        at org.apache.spark.scheduler.TaskSchedulerImpl.start(TaskSchedulerImpl.scala:164)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:500)
+        at com.cloudera.sdk.SparkStreamExample$.main(SparkStreamExample.scala:29)
+        at com.cloudera.sdk.SparkStreamExample.main(SparkStreamExample.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.apache.spark.deploy.JavaMainApplication.start(SparkApplication.scala:52)
+        at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:892)
+        at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:197)
+        at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:227)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:136)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+2018-05-18 18:46:56,319 INFO  [Thread-1] util.ShutdownHookManager (Logging.scala:logInfo(54)) - Shutdown hook called
+2018-05-18 18:46:56,320 INFO  [Thread-1] util.ShutdownHookManager (Logging.scala:logInfo(54)) - Deleting directory /tmp/spark-d9e9e1f0-6ee1-46a1-b467-70b66332629b
+2018-05-18 18:46:56,321 INFO  [Thread-1] util.ShutdownHookManager (Logging.scala:logInfo(54)) - Deleting directory /tmp/spark-9c345d10-be8a-4677-9d90-9ec0afddffd0
+[raken@cdh02 flume]$
