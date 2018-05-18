@@ -1,0 +1,58 @@
+	dom		usr			tsp			IP
+	www.google.com	juan1@gmail.com		YY/MM/DD/10:30/ms	162.162.2.1
+	www.google.com	juan1@gmail.com		YY/MM/DD/10:32		192.200.211.102
+	www.google.com	juan1@gmail.com		YY/MM/DD/10:36		162.162.2.1
+	www.google.com	juan3@gmail.com		YY/MM/DD/10:30		162.162.2.1
+	www.google.com	juan3@gmail.com		YY/MM/DD/10:31		162.162.2.1
+	www.google.com	juan3@gmail.com		YY/MM/DD/10:32		162.162.2.1
+
+
+	www.APPLE.com	juan1@gmail.com		YY/MM/DD/10:31/ms	162.162.2.1
+	www.APPLE.com	juan1@gmail.com		YY/MM/DD/10:33/ms	162.162.2.1
+	www.APPLE.com	juan1@gmail.com		YY/MM/DD/10:38/ms	162.162.2.1
+
+	www.APPLE.com	juan8@gmail.com		YY/MM/DD/10:30/ms	162.162.2.1
+	www.APPLE.com	juan8@gmail.com		YY/MM/DD/10:39/ms	162.162.2.1
+
+
+USR por DOM en cierto TSP
+
+	key			Family Group
+PUT	[TSP][DOM]		USR		*tsp from key will be inverted to uses seconds and minutes
+GET	TSP USR			DOM
+
+
+
+DOM & IP de USR en cierto TSP
+	ky			Family Group
+PUT	TSP IP			USR DOM
+GET 	TSP DOM	IP		USR
+
+authentificate 
+
+Domain	email	IP	
+
+how many visitors a particular domain had during a given timeframe (from 8am to 10am) how many for each website
+	visitantes por dominio en cierta hora
+
+
+
+emails
+from domain where domain and hour
+
+which domains a particular user visited and from which IP address during a given timeframe
+	cual dominio visito el usuario y desde que IP en un lapso de tiempo
+
+email
+from domains where user = 'email'  IP
+
+	key			Family Group
+PUT	[TSP][USR]		correo
+GET	TSP			Usr
+
+
+
+DOM & IP de USR en cierto TSP
+	ky				Family Group
+PUT	
+GET 
